@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ali Baba Sports | The Ultimate Cricket Gear Arena</title>
+  
+  <!-- FontAwesome 6 Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       Announcement Top Bar
+       ========================================================================== -->
+  <div class="announcement-bar">
+    <div class="container announcement-content">
+      <div style="display: flex; align-items: center;">
+        <span class="announcement-badge"><i class="fa-solid fa-bolt"></i> PRO DEAL</span>
+        <span>Get <strong>20% OFF</strong> on all Grade 1 English Willow Bats! Use Code: <strong style="color: var(--primary);">CRICKET20</strong></span>
+      </div>
+      <div class="announcement-links">
+        <a href="tel:+923001234567"><i class="fa-solid fa-phone"></i> +92 300 1234567</a>
+        <a href="https://wa.me/923001234567" target="_blank"><i class="fa-brands fa-whatsapp" style="color: #25d366;"></i> WhatsApp Support</a>
+        <select class="currency-select" id="currencySelect" title="Select Currency">
+          <option value="PKR">PKR (₨)</option>
+          <option value="USD">USD ($)</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Main Sticky Header & Navbar
+       ========================================================================== -->
+  <header class="main-header">
+    <div class="container nav-container">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon-wrap">
+          <i class="fa-solid fa-baseball-bat-ball"></i>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">ALI BABA <span>SPORTS</span></span>
+          <span class="brand-tagline">CRICKET PRO ARENA</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" id="navMenu">
+        <a href="#catalogSection" class="nav-link active">All Gear</a>
+        <a href="#catalogSection" class="nav-link" onclick="window.setCategoryFilter('bats')">Cricket Bats</a>
+        <a href="#catalogSection" class="nav-link" onclick="window.setCategoryFilter('balls')">Balls</a>
+        <a href="#catalogSection" class="nav-link" onclick="window.setCategoryFilter('protective')">Protective Gear</a>
+        <a href="#customizerSection" class="nav-link">Custom Bat Lab</a>
+        <a href="#reviewsSection" class="nav-link">Player Reviews</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <!-- Wishlist Trigger -->
+        <button class="icon-action-btn" id="wishlistTriggerBtn" title="Saved Wishlist">
+          <i class="fa-regular fa-heart"></i>
+          <span class="badge-counter" id="wishlistCountBadge" style="display: none;">0</span>
+        </button>
+
+        <!-- Cart Trigger -->
+        <button class="icon-action-btn" id="cartTriggerBtn" title="Cricket Kit Bag">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="badge-counter" id="cartCountBadge" style="display: none;">0</span>
+        </button>
+
+        <!-- Admin Portal Shortcut -->
+        <a href="admin.html" class="admin-portal-link" title="Open Store Management Portal">
+          <i class="fa-solid fa-lock"></i>
+          <span>Admin Panel</span>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="hamburger-btn" id="hamburgerBtn" title="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       Hero Section
+       ========================================================================== -->
+  <section class="hero-section">
+    <div class="hero-bg-glow"></div>
+    <div class="container hero-grid">
+      
+      <!-- Left Hero Pitch -->
+      <div>
+        <div class="hero-tag">
+          <i class="fa-solid fa-award"></i> Sialkot Handcrafted Masterpieces • Grade 1+ English Willow
+        </div>
+        <h1 class="hero-title">
+          UNLEASH YOUR <span class="highlight">INNER CHAMPION</span> ON THE 22 YARDS.
+        </h1>
+        <p class="hero-subtitle">
+          Engineered for punishing stroke makers and blistering fast bowlers. Experience balance, explosive sweet-spots, and match-winning rebound speed trusted by elite cricketers worldwide.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#catalogSection" class="btn-primary">
+            <i class="fa-solid fa-bolt"></i> Explore Match Gear
+          </a>
+          <a href="#customizerSection" class="btn-secondary">
+            <i class="fa-solid fa-sliders"></i> Custom Bat Configurator
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <h4>10,000<span>+</span></h4>
+            <p>Bats Hand-Crafted</p>
+          </div>
+          <div class="stat-item">
+            <h4>100<span>%</span></h4>
+            <p>Genuine English Willow</p>
+          </div>
+          <div class="stat-item">
+            <h4>4.9<span>★</span></h4>
+            <p>First-Class Rating</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Hero Showcase Card -->
+      <div class="hero-visual">
+        <div class="hero-card-showcase">
+          <span class="hero-floating-badge">
+            <i class="fa-solid fa-fire"></i> Player Edition 2026
+          </span>
+          <img class="hero-product-img" src="https://images.unsplash.com/photo-1593341646782-e0b495cff86d?w=800&auto=format&fit=crop&q=80" alt="CA Plus 15000 English Willow Bat">
+          <h3 style="font-family: var(--font-heading); font-size: 1.4rem; font-weight: 800; margin-bottom: 4px;">CA Plus 15000 Pro Player</h3>
+          <p style="color: var(--primary); font-weight: 700; font-size: 1.1rem; margin-bottom: 12px;">Rs. 65,000 <span style="font-size: 0.85rem; color: var(--text-muted); text-decoration: line-through;">Rs. 78,000</span></p>
+          <a href="#catalogSection" class="btn-primary" style="width: 100%; justify-content: center; padding: 12px;">
+            Order Now with Free Delivery
+          </a>
+        </div>
+
+        <div class="hero-floating-card">
+          <div class="floating-icon">
+            <i class="fa-solid fa-truck-fast"></i>
+          </div>
+          <div class="floating-text">
+            <h5>Nationwide 24-48h Delivery</h5>
+            <p>Free tracked courier across Pakistan</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Trust & Quality Strip
+       ========================================================================== -->
+  <section class="trust-strip">
+    <div class="container trust-grid">
+      <div class="trust-item">
+        <div class="trust-icon"><i class="fa-solid fa-certificate"></i></div>
+        <div class="trust-info">
+          <h5>100% Genuine Willow</h5>
+          <p>Hand-selected Grade 1 clefts from England</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <div class="trust-info">
+          <h5>ICC Match Certified</h5>
+          <p>Strictly compliant with MCC cricket laws</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon"><i class="fa-solid fa-boxes-packing"></i></div>
+        <div class="trust-info">
+          <h5>Factory Direct Pricing</h5>
+          <p>Direct from Sialkot master bat-makers</p>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon"><i class="fa-solid fa-rotate-left"></i></div>
+        <div class="trust-info">
+          <h5>7-Day Money Back</h5>
+          <p>100% satisfaction guarantee or return</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Flash Sale & Deals Ticker
+       ========================================================================== -->
+  <section class="flash-sale-section">
+    <div class="container">
+      <div class="flash-sale-card">
+        <div class="flash-content">
+          <h3><i class="fa-solid fa-stopwatch" style="color: var(--primary);"></i> FLASH SALE: SIALKOT CRICKET DERBY</h3>
+          <p>Extra 20% off at checkout with coupon code <strong>CRICKET20</strong>. Hurry, limited tournament stocks!</p>
+        </div>
+        <div class="countdown-box">
+          <div class="time-unit">
+            <div class="time-num" id="timerHours">18</div>
+            <div class="time-label">Hours</div>
+          </div>
+          <span style="font-weight: 800; font-size: 1.5rem; color: var(--primary);">:</span>
+          <div class="time-unit">
+            <div class="time-num" id="timerMins">42</div>
+            <div class="time-label">Minutes</div>
+          </div>
+          <span style="font-weight: 800; font-size: 1.5rem; color: var(--primary);">:</span>
+          <div class="time-unit">
+            <div class="time-num" id="timerSecs">15</div>
+            <div class="time-label">Seconds</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Product Catalog Section
+       ========================================================================== -->
+  <section class="catalog-section" id="catalogSection">
+    <div class="container">
+      
+      <div class="section-header">
+        <div>
+          <span class="section-tag">PRO EQUIPMENT CATALOG</span>
+          <h2 class="section-title">CHOOSE YOUR MATCH WEAPON</h2>
+        </div>
+      </div>
+
+      <!-- Filter Controls Bar -->
+      <div class="filter-bar">
+        <div class="category-tabs">
+          <button class="category-btn active" data-category="all">All Gear</button>
+          <button class="category-btn" data-category="bats">Cricket Bats</button>
+          <button class="category-btn" data-category="balls">Leather Balls</button>
+          <button class="category-btn" data-category="protective">Protective Armor</button>
+          <button class="category-btn" data-category="bags">Kit Bags</button>
+          <button class="category-btn" data-category="shoes">Spikes Shoes</button>
+          <button class="category-btn" data-category="apparel">Jerseys & Whites</button>
+        </div>
+
+        <div class="catalog-controls">
+          <div class="search-input-wrapper">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="searchInput" placeholder="Search bats, balls, pads...">
+          </div>
+          <select class="sort-select" id="sortSelect" title="Sort Products">
+            <option value="featured">Featured / Bestsellers</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="rating">Top Rated (Stars)</option>
+            <option value="newest">Newest Arrivals</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Dynamic Products Grid -->
+      <div class="products-grid" id="productsGrid">
+        <!-- Rendered dynamically by js/app.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Interactive Cricket Bat Configurator
+       ========================================================================== -->
+  <section class="customizer-section" id="customizerSection">
+    <div class="container">
+      <div class="customizer-box">
+        
+        <div style="text-align: center; margin-bottom: 36px;">
+          <span class="section-tag">CUSTOM WORKSHOP</span>
+          <h2 class="section-title">TAILOR YOUR CUSTOM CRICKET BAT</h2>
+          <p style="color: var(--text-secondary); max-width: 600px; margin: 8px auto 0;">
+            Select your exact willow grade, sweet-spot height, weight and cane handle. Our Sialkot master craftsmen will press and carve it to your personal specifications.
+          </p>
+        </div>
+
+        <div class="customizer-grid">
+          
+          <!-- Options Form -->
+          <div class="config-options">
+            
+            <div class="config-group">
+              <label><i class="fa-solid fa-crosshairs" style="color: var(--primary);"></i> Batting Playstyle & Sweet Spot</label>
+              <div class="pill-selector">
+                <button class="config-pill active" data-config="style" data-val="Power Hitter (Slight Low Swell)">Power Hitter (Low Swell)</button>
+                <button class="config-pill" data-config="style" data-val="Classical Stroke Maker (Mid Swell)">Classical (Mid Swell)</button>
+                <button class="config-pill" data-config="style" data-val="All-Round 360 (Extended Sweetspot)">All-Round 360</button>
+              </div>
+            </div>
+
+            <div class="config-group">
+              <label><i class="fa-solid fa-tree" style="color: var(--primary);"></i> Willow Wood Selection</label>
+              <div class="pill-selector">
+                <button class="config-pill active" data-config="willow" data-val="Grade 1+ English Willow (Pro Player)">Grade 1+ English Willow</button>
+                <button class="config-pill" data-config="willow" data-val="Grade 2 English Willow (Club Match)">Grade 2 English Willow</button>
+                <button class="config-pill" data-config="willow" data-val="Seasoned Kashmir Willow (Heavy Tennis/Hard)">Seasoned Kashmir Willow</button>
+              </div>
+            </div>
+
+            <div class="config-group">
+              <label><i class="fa-solid fa-weight-hanging" style="color: var(--primary);"></i> Exact Bat Weight (Dead Weight vs Pickup)</label>
+              <div class="pill-selector">
+                <button class="config-pill" data-config="weight" data-val="2.7 lbs (Ultra Light)">2.7 lbs (Light Speed)</button>
+                <button class="config-pill active" data-config="weight" data-val="2.8 lbs (Balanced Power)">2.8 lbs (Balanced)</button>
+                <button class="config-pill" data-config="weight" data-val="2.9 lbs (Heavy Artillery)">2.9 lbs (Heavy Edge)</button>
+              </div>
+            </div>
+
+            <div class="config-group">
+              <label><i class="fa-solid fa-grip" style="color: var(--primary);"></i> Handle Type</label>
+              <div class="pill-selector">
+                <button class="config-pill active" data-config="handle" data-val="Semi-Oval 12-Piece Cane">Semi-Oval 12-Piece Cane</button>
+                <button class="config-pill" data-config="handle" data-val="Round Dynamic Cane">Round Dynamic Cane</button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Live Preview & Action Card -->
+          <div class="custom-bat-preview">
+            <img src="https://images.unsplash.com/photo-1593341646782-e0b495cff86d?w=800&auto=format&fit=crop&q=80" alt="Ali Baba Custom Bat Preview">
+            
+            <div class="custom-spec-summary">
+              <div class="custom-spec-row">
+                <span>Selected Willow:</span>
+                <strong id="customWillowVal" style="color: var(--primary);">Grade 1+ English Willow</strong>
+              </div>
+              <div class="custom-spec-row">
+                <span>Target Weight:</span>
+                <strong id="customWeightVal">2.8 lbs</strong>
+              </div>
+              <div class="custom-spec-row">
+                <span>Estimated Price:</span>
+                <strong id="customPriceVal" style="font-size: 1.1rem; color: var(--primary);">Rs. 62,000</strong>
+              </div>
+            </div>
+
+            <button class="btn-primary" id="addCustomBatBtn" style="width: 100%; justify-content: center;">
+              <i class="fa-solid fa-cart-plus"></i> Order Custom Tailored Bat
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Customer Testimonials
+       ========================================================================== -->
+  <section class="testimonials-section" id="reviewsSection">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 40px;">
+        <span class="section-tag">VERIFIED CRICKETER REVIEWS</span>
+        <h2 class="section-title">TRUSTED BY CLUB & FIRST-CLASS PLAYERS</h2>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="stars" style="margin-bottom: 12px; color: var(--accent-gold);">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-quote">
+            "The CA Plus 15000 from Ali Baba Sports has unreal ping! 40mm edges and the bat picks up like 2.6 lbs even though it weighs 2.8. Smashed two centuries in the Lahore club league."
+          </p>
+          <div class="testimonial-author">
+            <img class="author-avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Zubair Khan">
+            <div class="author-info">
+              <h5>Zubair Khan</h5>
+              <p>Top-Order Batsman, Lahore Regional League</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars" style="margin-bottom: 12px; color: var(--accent-gold);">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-quote">
+            "Ordered the Shrey Titanium Helmet and CA shark-skin gloves to Islamabad. Delivered in less than 36 hours. Genuine gear packed with authentic holographic tags. Highly recommended!"
+          </p>
+          <div class="testimonial-author">
+            <img class="author-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80" alt="Hamza Tariq">
+            <div class="author-info">
+              <h5>Hamza Tariq</h5>
+              <p>Wicketkeeper, Islamabad Cricket Club</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars" style="margin-bottom: 12px; color: var(--accent-gold);">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-quote">
+            "We bought 4 tournament boxes of Kookaburra Pink Turf balls for our day-night trophy in Karachi. The seam integrity and swing lasted through the entire 40 overs. Best supplier in Pakistan."
+          </p>
+          <div class="testimonial-author">
+            <img class="author-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80" alt="Fahad Mehmood">
+            <div class="author-info">
+              <h5>Captain Fahad Mehmood</h5>
+              <p>Karachi Gymkhana Cricket Team</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Slide-Over Drawers (Cart & Wishlist)
+       ========================================================================== -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+  <!-- Cart Drawer -->
+  <aside class="slide-drawer" id="cartDrawer">
+    <div class="drawer-header">
+      <div class="drawer-title">
+        <i class="fa-solid fa-bag-shopping" style="color: var(--primary);"></i> Cricket Kit Bag
+      </div>
+      <button class="drawer-close-btn" id="closeCartBtn" title="Close Bag">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="drawer-body" id="cartItemsList">
+      <!-- Injected by js/app.js -->
+    </div>
+
+    <div class="drawer-footer">
+      <div class="coupon-box">
+        <input type="text" id="couponInput" placeholder="Discount Code (e.g. CRICKET20)">
+        <button class="apply-coupon-btn" id="applyCouponBtn">Apply</button>
+      </div>
+
+      <div class="order-summary-row">
+        <span>Subtotal</span>
+        <span id="cartSubtotal">Rs. 0</span>
+      </div>
+      <div class="order-summary-row">
+        <span>Coupon Discount</span>
+        <span id="cartDiscount" style="color: var(--primary);">Rs. 0</span>
+      </div>
+      <div class="order-summary-row">
+        <span>Delivery Nationwide</span>
+        <span id="cartShipping">FREE</span>
+      </div>
+      <div class="order-summary-row total-row">
+        <span>Total Payable</span>
+        <span id="cartTotal">Rs. 0</span>
+      </div>
+
+      <button class="btn-primary" id="checkoutBtn" style="width: 100%; justify-content: center; margin-top: 16px;">
+        <i class="fa-solid fa-credit-card"></i> Proceed to Checkout
+      </button>
+    </div>
+  </aside>
+
+  <!-- Wishlist Drawer -->
+  <aside class="slide-drawer" id="wishlistDrawer">
+    <div class="drawer-header">
+      <div class="drawer-title">
+        <i class="fa-solid fa-heart" style="color: var(--accent-red);"></i> Saved Cricket Gear
+      </div>
+      <button class="drawer-close-btn" id="closeWishlistBtn" title="Close Wishlist">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="drawer-body" id="wishlistItemsList">
+      <!-- Injected by js/app.js -->
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       Quick View Product Modal
+       ========================================================================== -->
+  <div class="modal-overlay" id="quickViewModal">
+    <div class="modal-box">
+      <button class="modal-close-corner" id="closeQuickViewBtn">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div id="quickViewContent">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Checkout Modal
+       ========================================================================== -->
+  <div class="modal-overlay" id="checkoutModal">
+    <div class="modal-box" style="max-width: 850px;">
+      <button class="modal-close-corner" id="closeCheckoutBtn">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      
+      <div class="checkout-modal-content">
+        <h2 style="font-family: var(--font-heading); font-size: 1.6rem; margin-bottom: 4px;">
+          <i class="fa-solid fa-truck-ramp-box" style="color: var(--primary);"></i> Dispatch & Delivery Details
+        </h2>
+        <p style="color: var(--text-muted); font-size: 0.85rem;">Provide your delivery address across Pakistan. Instant dispatch from Sialkot factory.</p>
+
+        <form id="checkoutForm">
+          <div class="checkout-grid">
+            
+            <!-- Left Form Fields -->
+            <div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="orderName">Full Name *</label>
+                  <input type="text" id="orderName" class="form-input" placeholder="e.g. Babar Azam" required>
+                </div>
+                <div class="form-group">
+                  <label for="orderPhone">Mobile Number (WhatsApp) *</label>
+                  <input type="tel" id="orderPhone" class="form-input" placeholder="e.g. 0300 1234567" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="orderEmail">Email Address</label>
+                  <input type="email" id="orderEmail" class="form-input" placeholder="cricketer@gmail.com">
+                </div>
+                <div class="form-group">
+                  <label for="orderCity">City / Destination *</label>
+                  <select id="orderCity" class="form-select" required>
+                    <option value="Lahore">Lahore</option>
+                    <option value="Karachi">Karachi</option>
+                    <option value="Islamabad">Islamabad</option>
+                    <option value="Rawalpindi">Rawalpindi</option>
+                    <option value="Sialkot">Sialkot</option>
+                    <option value="Faisalabad">Faisalabad</option>
+                    <option value="Peshawar">Peshawar</option>
+                    <option value="Multan">Multan</option>
+                    <option value="Quetta">Quetta</option>
+                    <option value="Gujranwala">Gujranwala</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Other City">Other Nationwide City</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="orderAddress">Complete Street Address / House No. *</label>
+                <textarea id="orderAddress" class="form-input" rows="2" placeholder="House #, Street #, Sector/Area, Landmark..." required></textarea>
+              </div>
+
+              <div style="margin-top: 14px;">
+                <label style="font-size: 0.85rem; font-weight: 700; color: #cbd5e1; display: block; margin-bottom: 8px;">Select Payment Mode *</label>
+                <div class="payment-method-selector">
+                  <label class="payment-option-label active">
+                    <input type="radio" name="paymentMethod" value="Cash on Delivery" checked>
+                    <div>
+                      <div style="font-weight: 700; font-size: 0.9rem;">Cash on Delivery (COD)</div>
+                      <div style="font-size: 0.75rem; color: var(--text-muted);">Pay cash when courier delivers the gear at your doorstep</div>
+                    </div>
+                  </label>
+                  <label class="payment-option-label">
+                    <input type="radio" name="paymentMethod" value="JazzCash / Easypaisa">
+                    <div>
+                      <div style="font-weight: 700; font-size: 0.9rem;">JazzCash / Easypaisa Mobile Account</div>
+                      <div style="font-size: 0.75rem; color: var(--text-muted);">Instant mobile wallet transfer confirmation</div>
+                    </div>
+                  </label>
+                  <label class="payment-option-label">
+                    <input type="radio" name="paymentMethod" value="Bank Wire Transfer">
+                    <div>
+                      <div style="font-weight: 700; font-size: 0.9rem;">Direct Online Bank Transfer</div>
+                      <div style="font-size: 0.75rem; color: var(--text-muted);">HBL / Meezan Bank official sports account</div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Right Order Summary Column -->
+            <div class="checkout-sidebar">
+              <h4 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 12px; border-bottom: 1px solid var(--surface-border); padding-bottom: 8px;">
+                Order Summary
+              </h4>
+              
+              <div id="checkoutSummaryList">
+                <!-- Injected via js/app.js -->
+              </div>
+
+              <div style="border-top: 1px dashed var(--surface-border); margin-top: 14px; padding-top: 12px; display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-weight: 700;">Total Payable:</span>
+                <span id="checkoutFinalTotal" style="font-size: 1.3rem; font-weight: 900; color: var(--primary);">Rs. 0</span>
+              </div>
+
+              <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 20px;">
+                <i class="fa-solid fa-lock"></i> Confirm & Place Order
+              </button>
+
+              <p style="font-size: 0.72rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
+                <i class="fa-solid fa-shield-check"></i> 256-Bit SSL Encrypted & Protected
+              </p>
+            </div>
+
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Order Success Confirmation Modal
+       ========================================================================== -->
+  <div class="modal-overlay" id="orderSuccessModal">
+    <div class="modal-box" style="max-width: 500px; text-align: center; padding: 40px 30px;">
+      <div style="width: 70px; height: 70px; background: rgba(0, 230, 118, 0.15); border: 2px solid var(--primary); border-radius: 999px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: var(--primary); font-size: 2rem;">
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 8px;">Mubarak! Order Placed</h2>
+      <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 16px;">
+        Your cricket equipment has been scheduled for packaging. Your unique tracking number is:
+      </p>
+      
+      <div style="background: #090d16; border: 1px dashed var(--primary); border-radius: 8px; padding: 12px; display: inline-block; font-size: 1.25rem; font-weight: 800; color: var(--primary); letter-spacing: 1px; margin-bottom: 24px;" id="successOrderId">
+        ORD-XXXX
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <a href="https://wa.me/923001234567" target="_blank" class="btn-primary" style="justify-content: center; background: #25d366; color: #fff;">
+          <i class="fa-brands fa-whatsapp"></i> Chat with Sialkot Dispatch on WhatsApp
+        </a>
+        <a href="admin.html" class="btn-secondary" style="justify-content: center;">
+          <i class="fa-solid fa-chart-line"></i> View in Admin Panel Dashboard
+        </a>
+        <button class="btn-secondary" id="closeSuccessBtn" style="justify-content: center;">
+          Continue Shopping
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Footer
+       ========================================================================== -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-col">
+          <div class="brand-logo" style="margin-bottom: 16px;">
+            <div class="logo-icon-wrap" style="width: 40px; height: 40px; font-size: 1.3rem;">
+              <i class="fa-solid fa-baseball-bat-ball"></i>
+            </div>
+            <div class="brand-text">
+              <span class="brand-title" style="font-size: 1.25rem;">ALI BABA <span>SPORTS</span></span>
+              <span class="brand-tagline">CRICKET PRO ARENA</span>
+            </div>
+          </div>
+          <p>
+            Ali Baba Sports is Pakistan's premier cricket gear destination, handcrafted directly by the master bat-makers of Sialkot. Official gear supplier to first-class clubs, domestic academies, and international players.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-btn" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-btn" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-btn" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://wa.me/923001234567" class="social-btn" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Cricket Categories</h4>
+          <ul class="footer-links">
+            <li><a href="#catalogSection"><i class="fa-solid fa-angle-right"></i> Grade 1+ English Willow Bats</a></li>
+            <li><a href="#catalogSection"><i class="fa-solid fa-angle-right"></i> Seasoned Kashmir Willow Bats</a></li>
+            <li><a href="#catalogSection"><i class="fa-solid fa-angle-right"></i> 4-Piece Turf Leather Match Balls</a></li>
+            <li><a href="#catalogSection"><i class="fa-solid fa-angle-right"></i> Titanium Helmets & Chest Guards</a></li>
+            <li><a href="#catalogSection"><i class="fa-solid fa-angle-right"></i> Pittards Leather Batting Gloves</a></li>
+            <li><a href="#catalogSection"><i class="fa-solid fa-angle-right"></i> Heavy Duty Wheelie Kit Bags</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Player Services</h4>
+          <ul class="footer-links">
+            <li><a href="#customizerSection"><i class="fa-solid fa-angle-right"></i> Custom Bat Weight & Swell Lab</a></li>
+            <li><a href="admin.html"><i class="fa-solid fa-angle-right"></i> Store Admin Portal</a></li>
+            <li><a href="#"><i class="fa-solid fa-angle-right"></i> Bat Knocking-in & Oiling Service</a></li>
+            <li><a href="#"><i class="fa-solid fa-angle-right"></i> Worldwide DHL/FedEx Shipping</a></li>
+            <li><a href="#"><i class="fa-solid fa-angle-right"></i> Wholesale & Club Sponsorships</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-newsletter">
+          <h4>Sialkot Headquarters</h4>
+          <p style="font-size: 0.85rem; margin-bottom: 8px;">
+            <i class="fa-solid fa-location-dot" style="color: var(--primary);"></i> Wazirabad Road, Small Industrial Estate, Sialkot, Punjab, Pakistan
+          </p>
+          <p style="font-size: 0.85rem; margin-bottom: 14px;">
+            <i class="fa-solid fa-envelope" style="color: var(--primary);"></i> sales@alibabasports.pk
+          </p>
+
+          <h5 style="font-size: 0.88rem; font-weight: 700; margin-bottom: 8px;">VIP Player Newsletter</h5>
+          <input type="email" placeholder="Enter your email for secret drops">
+          <button class="btn-primary" style="width: 100%; justify-content: center; padding: 10px;">
+            Subscribe for 15% OFF
+          </button>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Ali Baba Sports (Pvt.) Ltd. All Rights Reserved. Master Handcrafted in Sialkot, Pakistan.</div>
+        <div style="display: flex; gap: 20px;">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+          <a href="admin.html" style="color: var(--accent-gold); font-weight: 700;">Admin Console</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    // Helper to click category buttons from nav links
+    window.setCategoryFilter = function(category) {
+      const btn = document.querySelector(`.category-btn[data-category="${category}"]`);
+      if (btn) btn.click();
+    };
+  </script>
+</body>
+</html>
